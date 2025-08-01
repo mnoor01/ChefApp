@@ -1,0 +1,29 @@
+"recipes":[
+    {
+        "recipe_number":"1",
+        "servings":"1",
+        "recipe_name":"Name of recipe 1",
+        "description":"Brief 1-2 sentence description of the dish",
+        "prep_time":"Time in minutes",
+        "cook_time":"Time in minutes",
+        "total_time":"Time in minutes",
+        "difficulty":"East/Medium/Hard",
+        "ingredients":[
+            {
+                "amount":"quantity",
+                "unit":"measuring unit",
+                "name":"ingredient name"
+            },
+            {
+                "amount":"qunatity",
+                "unit":"measuring unit",
+                "name":"ingredient name"
+            }
+        ],
+        "instructions":[
+            "step1 instruction",
+            "step2 instruction",
+            
+        ]
+    }
+]
