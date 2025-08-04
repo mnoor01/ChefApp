@@ -24,7 +24,11 @@ try {
         }
 
 }
- 
+    catch(error){
+         console.error("Error generating recipes:",error)
+   
+    }   
+    }
     formatResponse(result){
         const correctJson=result.replaceAll(/[\n\u00A0]/g,'').trim()
         this.recipes=JSON.parse(correctJSON)

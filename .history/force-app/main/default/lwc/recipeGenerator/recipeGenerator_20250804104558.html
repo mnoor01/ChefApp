@@ -6,16 +6,7 @@
             </lightning-layout-item>
             <lightning-layout-item size="12" medium-device-size="4" padding="horizontal-small">
                <template for:each={recipes} for:item="recipe">
-                   <div key={recipe.recipe_name}>
-                    <h2 class="slds-text-heading_large"></h2>
-                    <p class="slds-p-vertical_small">{recipe.description}</p>
-                    <template for:each={recpe.tags} for:item="tag">
-                        <lightning-badge key={tag} label={tag} class="slds-badge+inverse slds-m-vertical-medium"></lightning-badge>
-                    </template>
-
-                    
- </div>
-                       </template>
+                    <c-recipe-card key={recipe.id} recipe={recipe}>
             </lightning-layout-item>
         </lightning-layout>
     </div>
