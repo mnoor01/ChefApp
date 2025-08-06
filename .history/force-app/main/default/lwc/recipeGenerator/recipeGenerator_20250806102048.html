@@ -6,9 +6,6 @@
             </lightning-layout-item>
             <lightning-layout-item size="12" medium-device-size="4" padding="horizontal-small">
                <template for:each={recipes} for:item="recipe"></template>
-               <template lwc:if={isGenerating}>
-                <lightning-spinner size="medium"></lightning-spinner>
-               </template>
             </lightning-layout-item>
         </lightning-layout>
     </div>
