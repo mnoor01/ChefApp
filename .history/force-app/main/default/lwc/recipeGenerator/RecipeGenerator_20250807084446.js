@@ -3,10 +3,10 @@ import generateAIRecipes from '@salesforce/apex/AIRecipeController.generateAIRec
 
 export default class RecipeGenerator extends LightningElement {
 formData={}
-recipe=[]
+resipe=[]
 isGenerating
 
-   async generateRecipes(event){
+   async generateAIRecipes(event){
     this.isGenerating=true
         this.formData=event.detail.formData
         console.log("this.formData",JSON.stringify(this.formData));

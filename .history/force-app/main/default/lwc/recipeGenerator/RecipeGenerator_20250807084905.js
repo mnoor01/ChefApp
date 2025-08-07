@@ -6,7 +6,7 @@ formData={}
 recipe=[]
 isGenerating
 
-   async generateRecipes(event){
+   async generateAIRecipes(event){
     this.isGenerating=true
         this.formData=event.detail.formData
         console.log("this.formData",JSON.stringify(this.formData));

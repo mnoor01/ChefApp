@@ -1,0 +1,27 @@
+<template>
+    <div class="app-container">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12" medium-device-size="4" padding="horizontal-small">
+                <c-recipe-form ongenerate={generateRecipes}></c-recipe-form>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" medium-device-size="4" padding="horizontal-small">
+               <template for:each={recipes} for:item="recipe">
+                <div key={recipe.recipe_name}>
+                    <h2 class="slds-text-heading_large">{recipe.recipe_name}</h2>
+                    <p class="slds-p-vertical_small">{recipe.description}</p>
+                   <template for:each={recipe.tags} for:item="tag">
+                    <lightning-badge key={tag} label={tag} class="slds-badge_inverse slds-m-vertical_medium"></lightning-badge>
+                   </template>
+                   <c-recipe-stat-box title="prep time"></c-recipe-stat-box>
+                    <c-recipe-stat-box></c-recipe-stat-box>
+                     <c-recipe-stat-box></c-recipe-stat-box>
+                      <c-recipe-stat-box></c-recipe-stat-box>
+                </div>
+               </template>
+               <template lwc:if={isGenerating}>
+                <lightning-spinner size="medium"></lightning-spinner>
+               </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>
