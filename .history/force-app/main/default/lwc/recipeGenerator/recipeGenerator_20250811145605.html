@@ -33,10 +33,10 @@
         <template for:each={recipe.ingredients} for:item="ingredient">
             <li key={ingredient.ingredient.name}>
                 <div class="slds-grid">
-                    <div class="slds-col slds-size_4-of-4">
+                    <div class="slds-col slds-size_1-of-3">
                         <strong>{ingredient.amount} {ingredient.unit}</strong>
                     </div>
-                    <div class="slds-col slds-size_2-of-4">
+                    <div class="slds-col slds-size_2-of-3">
                         {ingredient.name}
                     </div>
                 </div>
